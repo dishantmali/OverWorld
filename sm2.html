@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Theft Auto V</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+    />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-image: url("./Image/sm2-bg.jpeg");
+            background-size: cover;
+            background-attachment: fixed;
+            color: #c6d4df;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        }
+
+        .header {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .row {
+            display: flex;
+            margin: 10px 0;
+        }
+
+        .col-md-3, .col-md-5, .col-md-7, .col-md-9 {
+            padding: 10px;
+        }
+
+        iframe {
+            height: 200px; /* Reduced height */
+            width: 100%;
+        }
+
+        .img-display {
+            height: 150px; /* Reduced height */
+            width: 230px; /* Reduced width */
+        }
+
+        .purchase-section {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            background: #1b2838;
+            padding: 10px;
+            border-radius: 5px;
+            width: fit-content;
+            margin-left: auto;
+            height: 100px;
+            margin-top: 50px;
+        }
+
+        .discount {
+            color: white;
+            background: #000;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 3px;
+        }
+
+        .price {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .purchase-button {
+            background-color: #1d8c1d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .purchase-button:hover {
+            background-color: #1a751a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 class="text-center">God of War Ragnarok</h3>
+
+        <!-- Image and Description Section -->
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-3">
+                <img src="./Image/sm2-in1.jpeg" alt="" class="img-fluid rounded" />
+            </div>
+            <div class="col-md-9">
+                <pre style='font-family: "Lucida Console", "Courier New", monospace;'>
+                  Be Greater. Together. The incredible power of the symbiote
+                  forces Peter Parker and Miles Morales into a desperate fight
+                  as they balance their lives, friendships, and their duty to
+                  protect in an exciting chapter of the critically acclaimed
+                  Spider-Man franchise on PC.
+                </pre>
+            </div>
+        </div>
+
+        <!-- Video and Review Section -->
+        <div class="row justify-content-center align-items-center mt-3">
+            <div class="col-md-5">
+                <iframe
+                    src="https://www.youtube.com/embed/nq1M_Wc4FIc?controls=0&loop=0&rel=0&modestbranding=1&disablekb=1"
+                    class="w-100 rounded"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <div class="col-md-7">
+                <pre style='font-family: "Lucida Console", "Courier New", monospace;'>
+                  All Reviews: Mostly Positive (9,635)
+                  Release Date: 30 Jan, 2025
+                  Developer: Insomniac Games, Nixxes Software
+                  Publisher: PlayStation Publishing LLC
+                </pre>
+            </div>
+        </div>
+
+        <!-- Extra Image Section -->
+        <div class="row justify-content-center align-items-center mt-3">
+            <div class="d-inline-flex p-3 bg-secondary text-white">
+                <div class="p-2">
+                    <img src="./Image/sm2-in2.jpeg" class="img-display" alt="">
+                </div>
+                <div class="p-2">
+                    <img src="./Image/sm2-in3.jpeg" class="img-display" alt="">
+                </div>
+                <div class="p-2">
+                    <img src="./Image/sm2-in4.jpg" class="img-display" alt="">
+                </div>
+                <div class="p-2">
+                    <img src="./Image/sm2-in5.jpg" class="img-display" alt="">
+                </div>
+                <div class="purchase-section p-2">
+                  <div class="discount">-17%</div>
+                  <div class="price">₹ 3,999</div>
+                  <button class="purchase-button" onclick="show()">Purchase</button>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function show(){
+    alert ("Game Purchase Successfully");
+}
+    </script>
+</body>
+</html>

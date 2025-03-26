@@ -1,0 +1,387 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: fixed;
+    background-image: url('./Image/back.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh; 
+    object-fit: cover;
+}
+
+#home-page, #games {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+#text-container {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-backdrop {
+    position: static;
+}
+
+.over {
+    color: red;
+}
+.login-submit{
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.world {
+    color: red;
+}
+
+/* Progress Bar */
+#progress-container {
+    width: 60%;
+    height: 8px;
+    background: gray;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background: red;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Home Page */
+#home-page {
+    display: none;
+    opacity: 0;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* Home Page */
+#home-page {
+    display: none;
+    height: 100vh;
+    background: url('./Image/1.webp') no-repeat center;
+    background-size: cover;     
+    /* background-position: center; */
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+    opacity: 0;  /* Initially hidden */
+}
+
+.navbar.visible {
+    opacity: 1;
+}
+
+
+/* Brand Name (Logo) - Stays on Left */
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: red !important;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.brand-name:hover {
+    text-shadow: 0 0 10px red, 0 0 20px red;
+}
+
+/* Navbar Toggler (Hamburger Icon) - White */
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Makes the icon white */
+}
+
+/* Centered Navbar Links */
+.navbar-collapse {
+    display: flex;
+    justify-content: center;
+}
+
+/* Navbar - Logo Left, Links Center */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: center; /* Center links */
+}
+
+/* Remove default left margin (Bootstrap adds `me-auto` by default) */
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(255, 0, 0) !important;
+    text-shadow: 0 0 10px red, 0 0 20px red;
+}
+
+/* Hero Section - Centered Left */
+.hero {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: red;
+    margin-left: 50px;
+}
+
+.hero p {
+    font-size: 25px;
+    overflow-x: hidden;
+    color: white;
+    margin-right: 70px;
+    font-family: "Lucida Console", "Courier New", monospace;;
+}
+
+.btn{
+    height: 35px;
+    width: 110px;
+    border-radius: 50% 0% 50% 0%;
+    margin-left: 50px;
+}
+#games{
+    background-image: linear-gradient(rgb(26, 23, 23),#2b395e,rgb(26, 23, 23),#2b395e) ;
+}
+.title{
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+
+.hover-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+
+.hover-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hover-card:hover .hover-content {
+    opacity: 1;
+}
+
+.hover-card:hover img {
+    opacity: 0.2;
+}
+
+.hover-content p {
+    margin: 0;
+}
+.title h3{
+    font-family: "Lucida Console", "Courier New", monospace;;
+}
+
+.update-title {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+#tournaments{
+    background-image: linear-gradient(rgb(26, 23, 23),#2b395e,rgb(26, 23, 23),#2b395e);
+}
+
+#tournaments h3{
+    color: whitesmoke;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    padding-top: 100px;
+}
+.dev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically */
+  }
+  
+  .carousel-inner .row {
+    gap: 10px; /* Space between images */
+  }
+  
+  .carousel-inner img {
+    height: 250px; /* Set image height */
+    object-fit:fill; /* Crop the image proportionally */
+    border-radius: 5px; /* Optional: Rounded corners */
+  }
+  .carousel {
+    max-width: 90%; /* Adjust width of the carousel */
+    margin: auto; /* Center the carousel */
+  }
+  
+  .carousel-item img {
+    height: 500px; /* Adjust the height of the images */
+    width: 80%; /* Ensure images fill the carousel width */
+    object-fit:fill; /* Make sure the images maintain aspect ratio */
+  }
+  .image-container {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 70%;
+    height: 100%;
+    object-fit:fill;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.1); /* Zoom in effect on hover */
+  }
+  
+  #aboutus {
+    color: whitesmoke;
+    min-height: 100vh;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-image: linear-gradient(rgb(26, 23, 23), #2b395e, rgb(26, 23, 23), #2b395e);
+}
+
+/* Heading */
+#aboutus h4 {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive font size */
+    color: #f23d10;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+#aboutus p {
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
+    font-family: "Lucida Console", "Courier New", monospace;
+    max-width: 80%;
+    line-height: 1.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    #aboutus p {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    #aboutus {
+        padding: 50px 20px;
+    }
+
+    #aboutus h4 {
+        font-size: 2.5rem;
+    }
+
+    #aboutus p {
+        font-size: 1.2rem;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    #aboutus h4 {
+        font-size: 2rem;
+    }
+
+    #aboutus p {
+        font-size: 1rem;
+    }
+}
+
+#contactus{
+    margin-top: 50px;
+}
